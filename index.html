@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoryCapsule - Bedtime Stories</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Password Modal -->
+    <div id="passwordModal" class="modal" style="display: flex;">
+        <div class="modal-content">
+            <h2>Enter Password</h2>
+            <p>Please enter the secret password to access your stories:</p>
+            <input type="password" id="passwordInput" class="password-input" placeholder="Enter password">
+            <button onclick="checkPassword()">Submit</button>
+            <p id="passwordError" class="error-message" style="display: none;">Incorrect password. Try again! 🤔</p>
+        </div>
+    </div>
+
+    <div class="container" style="display: none;">
+        <header>
+            <h1>StoryCapsule</h1>
+            <p class="subtitle">A Collection of Special Stories Just for You</p>
+        </header>
+
+        <main>
+            <div class="story-grid">
+                <div class="story-category" data-category="story1">
+                    <h3>The Samurai's Flower</h3>
+                    <div class="lock-status">🔒</div>
+                </div>
+                <div class="story-category" data-category="story2">
+                    <h3>Prophet Dawud</h3>
+                    <div class="lock-status">🔒</div>
+                </div>
+                <div class="story-category" data-category="story3">
+                    <h3>The Spy and the Secret Code</h3>
+                    <div class="lock-status">🔒</div>
+                </div>
+                <div class="story-category" data-category="story4">
+                    <h3>Prophet Suliman</h3>
+                    <div class="lock-status">🔒</div>
+                </div>
+                <div class="story-category" data-category="story5">
+                    <h3>The Timekeeper of Istanbul</h3>
+                    <div class="lock-status">🔒</div>
+                </div>
+                <div class="story-category" data-category="story6">
+                    <h3>Prophet Saleh</h3>
+                    <div class="lock-status">🔒</div>
+                </div>
+            </div>
+
+            <!-- Question Modal -->
+            <div id="questionModal" class="modal">
+                <div class="modal-content">
+                    <h2>Answer to Unlock</h2>
+                    <p id="question"></p>
+                    <div class="multiple-choice">
+                        <div class="choice">
+                            <input type="radio" name="answer" id="choice1" value="0">
+                            <label for="choice1" id="choice1Label"></label>
+                        </div>
+                        <div class="choice">
+                            <input type="radio" name="answer" id="choice2" value="1">
+                            <label for="choice2" id="choice2Label"></label>
+                        </div>
+                        <div class="choice">
+                            <input type="radio" name="answer" id="choice3" value="2">
+                            <label for="choice3" id="choice3Label"></label>
+                        </div>
+                        <div class="choice">
+                            <input type="radio" name="answer" id="choice4" value="3">
+                            <label for="choice4" id="choice4Label"></label>
+                        </div>
+                    </div>
+                    <button onclick="checkAnswer()">Submit</button>
+                </div>
+            </div>
+
+            <!-- Story Link Modal -->
+            <div id="storyModal" class="modal">
+                <div class="modal-content">
+                    <h2>Your Special Story</h2>
+                    <p>Click the button below to listen to your story:</p>
+                    <a id="storyLink" href="#" target="_blank" class="story-button">Listen to Story</a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with ❤️ just for you</p>
+        </footer>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html> 
